@@ -18,7 +18,7 @@ A simple Retrieval-Augmented Generation (RAG) system using LangChain, Ollama, an
 
    ```sh
    git clone https://github.com/Tornshorts/RAG-Tutorial.git
-   cd rag1
+   
    ```
 
 2. **Install dependencies:**
@@ -37,7 +37,7 @@ A simple Retrieval-Augmented Generation (RAG) system using LangChain, Ollama, an
 ## Project Structure
 
 ```
-rag tuitorial/
+RAG-Tutorial/
 │
 ├── data/                    # Place your PDF files here
 ├── main.py                  # Main entry point for the system
