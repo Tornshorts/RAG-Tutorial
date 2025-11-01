@@ -143,4 +143,8 @@ Ask a question (or type 'exit'): exit
 
 ---
 
-##
+## Optional
+- Run ui which allows to drag and drop documents
+```
+python app.py
+```

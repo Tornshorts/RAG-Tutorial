@@ -108,6 +108,12 @@ def start_qa_session():
             try:
                 result = qa.invoke(query)
                 print(f"\n🧠 Answer: {result['result']}\n")
+                
+                print("\n📄 Sources:")
+                for doc in result["source_documents"]:
+                    print(f"• {doc.metadata.get('source')} - Page {doc.metadata.get('page')}")
+
+
             except Exception as e:
                 print(f"❌ Error: {e}\n")
 

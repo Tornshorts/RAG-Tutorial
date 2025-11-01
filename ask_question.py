@@ -13,7 +13,7 @@ db = Chroma(
 retriever = db.as_retriever()
 
 # Set up the LLM with updated OllamaLLM
-llm = OllamaLLM(model="llama3.2:latest") #You can change to your prefered model
+llm = OllamaLLM(model="llama3.1:8b") #You can change to your prefered model
 
 # Build the QA chain
 qa = RetrievalQA.from_chain_type(
@@ -31,4 +31,6 @@ while True:
     result = qa.invoke(query)  
     print("\n🧠 Answer:", result["result"])
 
-    
+    print("\n📄 Sources:")
+    for doc in result["source_documents"]:
+        print(f"• {doc.metadata.get('source')} - Page {doc.metadata.get('page')}")
